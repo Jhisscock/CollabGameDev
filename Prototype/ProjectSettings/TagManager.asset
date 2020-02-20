@@ -6,6 +6,8 @@ TagManager:
   tags:
   - topOpen
   - bottomOpen
+  - topCameraMove
+  - switch
   layers:
   - Default
   - TransparentFX

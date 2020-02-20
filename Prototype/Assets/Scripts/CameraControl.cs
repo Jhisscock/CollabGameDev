@@ -7,10 +7,10 @@ public class CameraControl : MonoBehaviour
     public Camera mainCamera;
     public GameObject topPlayer;
     public GameObject bottomPlayer;
-    private bool switchSides = true;
-    private Vector3 screenSize;
-    private int topCount = 0;
-    private int bottomCount = 0;
+    public bool switchSides = true;
+    public Vector3 screenSize;
+    public int topCount = 0;
+    public int bottomCount = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,4 +70,20 @@ public class CameraControl : MonoBehaviour
             mainCamera.transform.position = new Vector3(mainCamera.transform.position.x + screenSize.x * -2, mainCamera.transform.position.y, mainCamera.transform.position.z);
         }*/
     }
+    public void SwitchScreens(){
+        if(switchSides){
+            mainCamera.cullingMask = ~(1 << 8);
+            mainCamera.transform.position = new Vector3(screenSize.x * 2 * bottomCount, mainCamera.transform.position.y, mainCamera.transform.position.z);
+            topPlayer.SetActive(false);
+            bottomPlayer.SetActive(true);
+            switchSides = false;
+        }else{
+            mainCamera.cullingMask = ~(1 << 9);
+            mainCamera.transform.position = new Vector3(topCount * screenSize.x * 2, mainCamera.transform.position.y, mainCamera.transform.position.z);
+            topPlayer.SetActive(true);
+            bottomPlayer.SetActive(false);
+            switchSides = true;
+        }
+    }
+    
 }
