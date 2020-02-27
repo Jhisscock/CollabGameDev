@@ -24,7 +24,9 @@ public class PlayerController : MonoBehaviour
         Walk(dir);
 
         if(Input.GetKeyDown(KeyCode.Space)){
-            Jump(Vector2.up, false);
+            if(Collision.onGround){
+                Jump(Vector2.up, false);
+            }
         }
     }
 
