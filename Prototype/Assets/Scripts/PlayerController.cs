@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     public static bool topOpen = false;
-    public static bool bottomOpen = true;
+    public static bool bottomOpen = false;
     public float speed = 4f;
     public float jHeight = 5f;
     // Start is called before the first frame update

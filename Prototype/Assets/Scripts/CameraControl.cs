@@ -83,5 +83,13 @@ public class CameraControl : MonoBehaviour
             switchSides = true;
         }
     }
+
+    public int GetScreenNumber(){
+        if(switchSides){
+            return topCount;
+        }else{
+            return bottomCount;
+        }
+    }
     
 }

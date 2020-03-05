@@ -8,6 +8,7 @@ TagManager:
   - bottomOpen
   - topCameraMove
   - switch
+  - Walls
   layers:
   - Default
   - TransparentFX
