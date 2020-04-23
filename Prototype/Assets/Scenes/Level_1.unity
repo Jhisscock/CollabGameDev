@@ -356,8 +356,14 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
+  topSwitch:
+    serializedVersion: 2
+    m_Bits: 2048
+  bottomSwitch:
+    serializedVersion: 2
+    m_Bits: 4096
   wallSide: 0
-  collisionRadius: 0.5
+  collisionRadius: 0.55
   bottomOffset: {x: 0, y: -0.01}
   rightOffset: {x: 0, y: 0}
   leftOffset: {x: 0, y: 0}
@@ -1141,6 +1147,16 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1563956540}
+    - target: {fileID: -8042685881967333238, guid: 0486a34ea81d9e549b60797eff17ef6c,
+        type: 3}
+      propertyPath: topPlayer
+      value: 
+      objectReference: {fileID: 699110055}
+    - target: {fileID: -8042685881967333238, guid: 0486a34ea81d9e549b60797eff17ef6c,
+        type: 3}
+      propertyPath: bottomPlayer
+      value: 
+      objectReference: {fileID: 6355006004537212379}
     - target: {fileID: 5129617562208850308, guid: 0486a34ea81d9e549b60797eff17ef6c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1209,7 +1225,7 @@ PrefabInstance:
     - target: {fileID: 5129617562208850309, guid: 0486a34ea81d9e549b60797eff17ef6c,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0486a34ea81d9e549b60797eff17ef6c, type: 3}
@@ -1605,6 +1621,12 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
+  topSwitch:
+    serializedVersion: 2
+    m_Bits: 2048
+  bottomSwitch:
+    serializedVersion: 2
+    m_Bits: 4096
   wallSide: 0
   collisionRadius: 0.55
   bottomOffset: {x: 0, y: 0}
@@ -1829,6 +1851,16 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1563956540}
+    - target: {fileID: -8042685881967333238, guid: 0486a34ea81d9e549b60797eff17ef6c,
+        type: 3}
+      propertyPath: topPlayer
+      value: 
+      objectReference: {fileID: 699110055}
+    - target: {fileID: -8042685881967333238, guid: 0486a34ea81d9e549b60797eff17ef6c,
+        type: 3}
+      propertyPath: bottomPlayer
+      value: 
+      objectReference: {fileID: 6355006004537212379}
     - target: {fileID: 5129617562208850308, guid: 0486a34ea81d9e549b60797eff17ef6c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1897,7 +1929,7 @@ PrefabInstance:
     - target: {fileID: 5129617562208850309, guid: 0486a34ea81d9e549b60797eff17ef6c,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0486a34ea81d9e549b60797eff17ef6c, type: 3}
