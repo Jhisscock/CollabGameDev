@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Created by https://www.gitignore.io/api/unity
 # Edit at https://www.gitignore.io/?templates=unity
@@ -70,6 +71,8 @@ crashlytics-build.properties
 
 # End of https://www.gitignore.io/api/unity
 =======
+=======
+>>>>>>> parent of 034391b6... Changed git ignore
 "Temp/*" 
 ".vs/*"
 ".vscode/*"
@@ -78,4 +81,7 @@ crashlytics-build.properties
 "obj/*"
 "Packages/*"
 "ProjectSetting/*"
+<<<<<<< HEAD
+>>>>>>> parent of 034391b6... Changed git ignore
+=======
 >>>>>>> parent of 034391b6... Changed git ignore

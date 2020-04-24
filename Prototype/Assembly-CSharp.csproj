@@ -65,7 +65,10 @@
     <Compile Include="Assets\Scripts\CameraControl.cs" />
     <Compile Include="Assets\Scripts\Collision.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\FlickeringLight.cs" />
+=======
+>>>>>>> parent of 034391b6... Changed git ignore
 =======
 >>>>>>> parent of 034391b6... Changed git ignore
     <Compile Include="Assets\Scripts\Level_1\Room_1.cs" />
@@ -109,9 +112,12 @@
       <HintPath>C:/Users/manny/Desktop/CollabGameDev/Prototype/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>C:/Users/manny/Desktop/CollabGameDev/Prototype/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
+=======
+>>>>>>> parent of 034391b6... Changed git ignore
 =======
 >>>>>>> parent of 034391b6... Changed git ignore
     <Reference Include="Unity.Rider.Editor">
@@ -124,9 +130,12 @@
       <HintPath>C:/Users/manny/Desktop/CollabGameDev/Prototype/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>C:/Users/manny/Desktop/CollabGameDev/Prototype/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
+=======
+>>>>>>> parent of 034391b6... Changed git ignore
 =======
 >>>>>>> parent of 034391b6... Changed git ignore
     <Reference Include="Unity.2D.Tilemap.Editor">
@@ -145,13 +154,19 @@
       <HintPath>C:/Users/manny/Desktop/CollabGameDev/Prototype/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 034391b6... Changed git ignore
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>C:/Users/manny/Desktop/CollabGameDev/Prototype/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>C:/Users/manny/Desktop/CollabGameDev/Prototype/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+>>>>>>> parent of 034391b6... Changed git ignore
+=======
 >>>>>>> parent of 034391b6... Changed git ignore
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
