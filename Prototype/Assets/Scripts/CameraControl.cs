@@ -15,7 +15,7 @@ public class CameraControl : MonoBehaviour
     void Start()
     {
         screenSize = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        mainCamera.cullingMask = ~(1 << 9);
+        mainCamera.cullingMask = ~(1 << 9 | 1 << 12);
         bottomPlayer.SetActive(false);
     }
 
@@ -25,13 +25,13 @@ public class CameraControl : MonoBehaviour
         //The player switches the view of the camera by masking certain layers and deactivating other players
         if(Input.GetKeyDown(KeyCode.LeftShift)){
             if(switchSides){
-                mainCamera.cullingMask = ~(1 << 8);
+                mainCamera.cullingMask = ~((1 << 8) | (1 << 11));
                 mainCamera.transform.position = new Vector3(screenSize.x * 2 * bottomCount, mainCamera.transform.position.y, mainCamera.transform.position.z);
                 topPlayer.SetActive(false);
                 bottomPlayer.SetActive(true);
                 switchSides = false;
             }else{
-                mainCamera.cullingMask = ~(1 << 9);
+                mainCamera.cullingMask = ~(1 << 9 | 1 << 12);
                 mainCamera.transform.position = new Vector3(topCount * screenSize.x * 2, mainCamera.transform.position.y, mainCamera.transform.position.z);
                 topPlayer.SetActive(true);
                 bottomPlayer.SetActive(false);
@@ -70,13 +70,13 @@ public class CameraControl : MonoBehaviour
     }
     public void SwitchScreens(){
         if(switchSides){
-            mainCamera.cullingMask = ~(1 << 8);
+            mainCamera.cullingMask = ~((1 << 8) | (1 << 11));
             mainCamera.transform.position = new Vector3(screenSize.x * 2 * bottomCount, mainCamera.transform.position.y, mainCamera.transform.position.z);
             topPlayer.SetActive(false);
             bottomPlayer.SetActive(true);
             switchSides = false;
         }else{
-            mainCamera.cullingMask = ~(1 << 9);
+            mainCamera.cullingMask = ~(1 << 9 | 1 << 12);
             mainCamera.transform.position = new Vector3(topCount * screenSize.x * 2, mainCamera.transform.position.y, mainCamera.transform.position.z);
             topPlayer.SetActive(true);
             bottomPlayer.SetActive(false);

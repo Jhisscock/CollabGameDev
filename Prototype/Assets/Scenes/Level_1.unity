@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.254
@@ -353,13 +353,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9c5094f5a9154741a003d75044d944f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
+  topSwitch:
+    serializedVersion: 2
+    m_Bits: 2048
+  bottomSwitch:
+    serializedVersion: 2
+    m_Bits: 4096
   wallSide: 0
-  collisionRadius: 0.5
+  collisionRadius: 0.55
   bottomOffset: {x: 0, y: -0.01}
   rightOffset: {x: 0, y: 0}
   leftOffset: {x: 0, y: 0}
@@ -912,7 +918,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -1421,8 +1427,18 @@ PrefabInstance:
     - target: {fileID: -8042685881967333238, guid: 0486a34ea81d9e549b60797eff17ef6c,
         type: 3}
       propertyPath: gameManager
-      value: 
+      value:
       objectReference: {fileID: 1563956540}
+    - target: {fileID: -8042685881967333238, guid: 0486a34ea81d9e549b60797eff17ef6c,
+        type: 3}
+      propertyPath: topPlayer
+      value:
+      objectReference: {fileID: 699110055}
+    - target: {fileID: -8042685881967333238, guid: 0486a34ea81d9e549b60797eff17ef6c,
+        type: 3}
+      propertyPath: bottomPlayer
+      value:
+      objectReference: {fileID: 6355006004537212379}
     - target: {fileID: 5129617562208850308, guid: 0486a34ea81d9e549b60797eff17ef6c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1491,7 +1507,7 @@ PrefabInstance:
     - target: {fileID: 5129617562208850309, guid: 0486a34ea81d9e549b60797eff17ef6c,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5129617562208850310, guid: 0486a34ea81d9e549b60797eff17ef6c,
         type: 3}
@@ -1688,8 +1704,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
@@ -1749,8 +1765,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
@@ -1819,8 +1835,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
@@ -1880,8 +1896,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 677bdec1d07d44d4dab040e765c7de53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   count: 0
   Room_1_Walls_Top: {fileID: 1356948690}
   Room_1_Walls_Bottom: {fileID: 1716612091}
@@ -1909,8 +1925,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8cd1fdd4a4f368642a61293203b1bfad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   mainCamera: {fileID: 243374280}
   topPlayer: {fileID: 699110055}
   bottomPlayer: {fileID: 6355006004537212379}
@@ -2071,11 +2087,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9c5094f5a9154741a003d75044d944f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
+  topSwitch:
+    serializedVersion: 2
+    m_Bits: 2048
+  bottomSwitch:
+    serializedVersion: 2
+    m_Bits: 4096
   wallSide: 0
   collisionRadius: 0.55
   bottomOffset: {x: 0, y: 0}
@@ -2299,8 +2321,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd05b7f462636ad4aa8c059506a9eec5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   speed: 5
   jHeight: 5
   animator: {fileID: 6355006004537212380}
@@ -2314,8 +2336,18 @@ PrefabInstance:
     - target: {fileID: -8042685881967333238, guid: 0486a34ea81d9e549b60797eff17ef6c,
         type: 3}
       propertyPath: gameManager
-      value: 
+      value:
       objectReference: {fileID: 1563956540}
+    - target: {fileID: -8042685881967333238, guid: 0486a34ea81d9e549b60797eff17ef6c,
+        type: 3}
+      propertyPath: topPlayer
+      value:
+      objectReference: {fileID: 699110055}
+    - target: {fileID: -8042685881967333238, guid: 0486a34ea81d9e549b60797eff17ef6c,
+        type: 3}
+      propertyPath: bottomPlayer
+      value:
+      objectReference: {fileID: 6355006004537212379}
     - target: {fileID: 5129617562208850308, guid: 0486a34ea81d9e549b60797eff17ef6c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2384,7 +2416,7 @@ PrefabInstance:
     - target: {fileID: 5129617562208850309, guid: 0486a34ea81d9e549b60797eff17ef6c,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5129617562208850310, guid: 0486a34ea81d9e549b60797eff17ef6c,
         type: 3}
@@ -2499,7 +2531,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -2513,8 +2545,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd05b7f462636ad4aa8c059506a9eec5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   speed: 5
   jHeight: 5
   animator: {fileID: 699110056}
