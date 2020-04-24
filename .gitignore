@@ -1,1 +1,8 @@
 "Temp/*" 
+".vs/*"
+".vscode/*"
+"Library/*"
+"Logs/*"
+"obj/*"
+"Packages/*"
+"ProjectSetting/*"
