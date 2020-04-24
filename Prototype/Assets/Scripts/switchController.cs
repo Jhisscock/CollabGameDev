@@ -5,6 +5,7 @@ using UnityEngine;
 public class switchController : MonoBehaviour
 {
     public GameObject gameManager;
+    public AudioSource switchSound;
     public GameObject topPlayer;
     public GameObject bottomPlayer;
     private CameraControl CC;
@@ -14,7 +15,18 @@ public class switchController : MonoBehaviour
     void Start(){
         CC = gameManager.GetComponent<CameraControl>();
         R_1 = gameManager.GetComponent<Room_1>();
+        switchSound = gameManager.GetComponent<AudioSource>();
     }
+
+    void OnTriggerStay2D(Collider2D other){
+        if(other.gameObject.tag == "Player" && Input.GetKey(KeyCode.RightShift)){
+            R_1.Room_1_Counter();
+            CC.SwitchScreens();
+            switchSound.Play();
+        }
+    }
+
+
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.RightShift)){
