@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public static bool bottomOpen = false;
     public float speed = 4f;
     public float jHeight = 5f;
+    public Animator animator;
+    bool facingRight = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,15 +25,41 @@ public class PlayerController : MonoBehaviour
         Vector2 dir = new Vector2(x, y);
         Walk(dir);
 
+
+
         if(Input.GetKeyDown(KeyCode.Space)){
             if(Collision.onGround){
                 Jump(Vector2.up, false);
+                animator.SetBool("IsJumping", true);
             }
         }
+        if(rb.velocity.y < 0){
+          if(Collision.onGround){
+             animator.SetBool("IsJumping", false);
+           }
+       }
+
     }
 
     void Walk(Vector2 n){
         rb.velocity = new Vector2(n.x * speed, rb.velocity.y);
+
+        animator.SetFloat("Speed", Mathf.Abs(n.x));
+
+        if(n.x > 0 && !facingRight){
+          Flip();
+        }
+        else if(n.x < 0 && facingRight){
+          Flip();
+        }
+    }
+
+    void Flip()
+    {
+      facingRight =!facingRight;
+      Vector3 theScale = transform.localScale;
+      theScale.x *= -1;
+      transform.localScale = theScale;
     }
 
     void Jump(Vector2 n, bool wall){

@@ -5,10 +5,12 @@ using UnityEngine;
 public class Collision : MonoBehaviour
 {
     public LayerMask groundLayer;
+    public LayerMask topSwitch;
+    public LayerMask bottomSwitch;
     public static bool onGround;
     public static bool onWall;
-    public static bool onRightWall;
-    public static bool onLeftWall;
+    public static bool onTopSwitch;
+    public static bool onBottomSwitch;
     public static bool onTop;
     public int wallSide;
     public float collisionRadius = 0.25f;
@@ -24,8 +26,8 @@ public class Collision : MonoBehaviour
     void Update()
     {
         onGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
-        //onWall = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer) || Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer);
-        //onRightWall =  Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
+        onTopSwitch = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, topSwitch);
+        onBottomSwitch =  Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, bottomSwitch);
         //onLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer);
         //onTop = Physics2D.OverlapCircle((Vector2)transform.position + topOffset, collisionRadius, groundLayer);
     }
