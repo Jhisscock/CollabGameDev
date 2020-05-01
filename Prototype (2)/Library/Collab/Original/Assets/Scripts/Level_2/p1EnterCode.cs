@@ -1,0 +1,74 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class p1EnterCode : MonoBehaviour
+{
+
+    private int numC1B = 0;
+    private int numC2B = 0;
+    private int numC3B = 0;
+    private int numEnterB = 0;
+    public bool rightCode = false;
+    private string sum = "";
+    private bool b1 = false,b2 = false,b3 = false,b4 = false;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(b1 && Input.GetKeyDown(KeyCode.E)){
+            numC1B++;
+        }else if(b2 && Input.GetKeyDown(KeyCode.E)){
+            numC2B++;
+        }else if(b3 && Input.GetKeyDown(KeyCode.E)){
+            numC3B++;
+        }else if(b4 && Input.GetKeyDown(KeyCode.E)){
+            numEnterB++;
+        }
+        rightCode = codeCorrect();
+    }
+
+    bool codeCorrect(){
+        sum = numC1B.ToString() + numC2B.ToString() + numC3B.ToString() + numEnterB.ToString();
+        if(sum == "5041"){
+            return true;;
+        }else{
+            return false;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.tag == "code1B"){
+            b1 = true;
+        }
+        else if(other.gameObject.tag == "code2B"){
+            b2 = true;
+        }
+        else if(other.gameObject.tag == "code3B"){
+            b3 = true;
+        }
+        else if(other.gameObject.tag == "enterB"){
+            b4 = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other){
+        if(other.gameObject.tag == "code1B"){
+            b1 = false;
+        }
+        else if(other.gameObject.tag == "code2B"){
+            b2 = false;
+        }
+        else if(other.gameObject.tag == "code3B"){
+            b3 = false;
+        }
+        else if(other.gameObject.tag == "enterB"){
+            b4 = false;
+        }
+    }
+}
